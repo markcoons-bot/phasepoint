@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Phasepoint
 
-## Getting Started
+**Precision care at every phase.**
 
-First, run the development server:
+The clinical operating system for EMDR therapy. Built for clinicians. Designed for patients. Grounded in 35 years of EMDR research.
+
+## What This Is
+
+Phasepoint is a clinician-directed EMDR operating system — not a wellness app, not a meditation tool. Clinical infrastructure that digitizes the complete EMDR treatment framework and extends the clinician's presence into the 167 hours between sessions.
+
+## Demo Navigation
+
+- **/** — Landing page and product story
+- **/demo** — Patient portal (6 fictional patients)
+- **/clinician** — Clinician operating system
+- **/calculator** — RTM billing calculator
+- **/research** — Research case and data thesis
+
+## Setup
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/markcoons-bot/phasepoint.git
+cd phasepoint
+
+# 2. Install dependencies
+npm install
+
+# 3. Create environment file
+cp .env.local.example .env.local
+# Add your ANTHROPIC_API_KEY to .env.local
+
+# 4. Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Connect to Vercel. Add `ANTHROPIC_API_KEY` as an environment variable in the Vercel dashboard. Deploy.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The journal AI reflection will be live once the API key is added. Everything else works without it.
 
-## Learn More
+## Demo Patients
 
-To learn more about Next.js, take a look at the following resources:
+All patient data is fictional, built around the clinical profiles of common EMDR presentations:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Patient | Diagnosis | Phase | Notes |
+|---------|-----------|-------|-------|
+| Sarah Chen | PTSD — MVA | Phase 4 | Active processing, SUDS 9→3 |
+| James Okafor | Performance anxiety | Phase 3 | Assessment, target identified |
+| Elena Vasquez | Complex PTSD | Phase 2 | Dissociation-gated, BLS held |
+| Michael Torres | Complicated grief | Phase 2 | Anniversary week |
+| Aisha Johnson | Attachment trauma | Phase 2 | Strong resource team building |
+| Tyler Park | Social anxiety (adolescent) | Phase 2 | Courage ladder active |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Clinical Foundation
 
-## Deploy on Vercel
+Built on peer-reviewed EMDR research, EMDRIA clinical guidelines, and the AIP model. All clinical architecture reviewed against published protocols.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Not medical advice. Not a substitute for clinical care.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Clinical Demo — Built to start a conversation.*

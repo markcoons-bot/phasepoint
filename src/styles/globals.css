@@ -1,0 +1,118 @@
+/* Google Fonts are imported in src/app/globals.css to satisfy CSS @import ordering requirements */
+
+/* ─── CSS Custom Properties ─────────────────────────────── */
+
+:root {
+  /* Primary palette — deep forest, clinical authority */
+  --color-forest-950: #0D2118;
+  --color-forest-900: #1C3D2E;
+  --color-forest-800: #2D5E46;
+  --color-forest-700: #3D7A5C;
+  --color-forest-600: #4A8B6C;
+  --color-forest-500: #5FA882;
+
+  /* Sage — approachable clinical */
+  --color-sage-300: #C8DDD5;
+  --color-sage-200: #DDE9E4;
+  --color-sage-100: #EBF3EF;
+  --color-sage-50: #F4F8F6;
+
+  /* Warm neutrals — cream, paper */
+  --color-cream-950: #1A1A18;
+  --color-cream-800: #3A3A36;
+  --color-cream-600: #6B6B64;
+  --color-cream-400: #9A9A90;
+  --color-cream-200: #C8C8BC;
+  --color-cream-100: #E8E4D8;
+  --color-cream-50: #F4EFE6;
+  --color-cream-25: #FAF7F2;
+
+  /* Accent — amber for clinical alerts, highlights */
+  --color-amber-600: #C8922E;
+  --color-amber-400: #DDB05A;
+  --color-amber-100: #F5E8CC;
+
+  /* Signal colors */
+  --color-signal-green: #2D7A4F;
+  --color-signal-amber: #B8860B;
+  --color-signal-red: #8B2020;
+  --color-signal-blue: #1E4A6B;
+
+  /* Surfaces */
+  --surface-base: #F4EFE6;
+  --surface-card: #FFFFFF;
+  --surface-elevated: #FDFAF5;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+}
+
+/* ─── Tailwind v4 Theme Tokens ──────────────────────────── */
+
+@theme {
+  /* Forest */
+  --color-forest-950: #0D2118;
+  --color-forest-900: #1C3D2E;
+  --color-forest-800: #2D5E46;
+  --color-forest-700: #3D7A5C;
+  --color-forest-600: #4A8B6C;
+  --color-forest-500: #5FA882;
+
+  /* Sage */
+  --color-sage-300: #C8DDD5;
+  --color-sage-200: #DDE9E4;
+  --color-sage-100: #EBF3EF;
+  --color-sage-50: #F4F8F6;
+
+  /* Cream */
+  --color-cream-950: #1A1A18;
+  --color-cream-800: #3A3A36;
+  --color-cream-600: #6B6B64;
+  --color-cream-400: #9A9A90;
+  --color-cream-200: #C8C8BC;
+  --color-cream-100: #E8E4D8;
+  --color-cream-50: #F4EFE6;
+  --color-cream-25: #FAF7F2;
+
+  /* Amber — overrides Tailwind default for this palette */
+  --color-amber-600: #C8922E;
+  --color-amber-400: #DDB05A;
+  --color-amber-100: #F5E8CC;
+
+  /* Signal */
+  --color-signal-green: #2D7A4F;
+  --color-signal-amber: #B8860B;
+  --color-signal-red: #8B2020;
+  --color-signal-blue: #1E4A6B;
+
+  /* Surface aliases */
+  --color-surface-base: #F4EFE6;
+  --color-surface-card: #FFFFFF;
+  --color-surface-elevated: #FDFAF5;
+
+  /* Font families — creates font-display, font-body utilities */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ─── Base Styles ───────────────────────────────────────── */
+
+body {
+  font-family: var(--font-body);
+  background: var(--surface-base);
+  color: var(--color-cream-950);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
