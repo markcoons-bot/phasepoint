@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Patient, EMDRPhase, RTMSummary } from '@/data/types'
 import MoodSparkline from '@/components/ui/MoodSparkline'
 import PhaseIndicator from '@/components/ui/PhaseIndicator'
@@ -31,7 +32,15 @@ export default function PatientSidebar({ patients, selectedId, onSelect, rtmSumm
 
       {/* Header */}
       <div className="px-4 pt-5 pb-4 border-b border-cream-100">
-        <p className="text-[10px] font-body uppercase tracking-[0.12em] text-cream-400 mb-0.5">Caseload</p>
+        <div className="flex items-center justify-between mb-0.5">
+          <p className="text-[10px] font-body uppercase tracking-[0.12em] text-cream-400">Caseload</p>
+          <Link
+            href="/clinician/new"
+            className="text-[10px] font-body font-medium text-forest-600 hover:text-forest-900 transition-colors"
+          >
+            + New Patient
+          </Link>
+        </div>
         <p className="font-body text-sm font-medium text-forest-900">
           {patients.length} Patients &middot; {rtmSummary.month}
         </p>
@@ -94,6 +103,17 @@ export default function PatientSidebar({ patients, selectedId, onSelect, rtmSumm
                       <MoodSparkline checkIns={patient.checkIns} maxHeight={14} />
                     </div>
                   )}
+
+                  {/* Session Mode link */}
+                  <div className="mt-1.5">
+                    <Link
+                      href={`/clinician/session/${patient.id}`}
+                      onClick={e => e.stopPropagation()}
+                      className="text-[10px] font-body text-forest-500 hover:text-forest-800 transition-colors"
+                    >
+                      Session Mode →
+                    </Link>
+                  </div>
                 </div>
               </div>
             </button>
