@@ -293,8 +293,8 @@ export default function CalculatorPage() {
         <div className="space-y-5">
           <SectionLabel className="mb-1">CPT Reference</SectionLabel>
           <h2 className="font-display text-[32px] font-light text-forest-900">CPT Code Reference</h2>
-          <div className="rounded-2xl border border-cream-200 overflow-hidden">
-            <table className="w-full">
+          <div className="rounded-2xl border border-cream-200 overflow-hidden overflow-x-auto">
+            <table className="w-full min-w-[500px]">
               <thead>
                 <tr className="bg-cream-25 border-b border-cream-200">
                   {['Code', 'Description', '2026 CMS Rate', 'Frequency'].map((h) => (

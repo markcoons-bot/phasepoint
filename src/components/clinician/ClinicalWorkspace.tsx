@@ -43,13 +43,13 @@ export default function ClinicalWorkspace({ patient, journalOpen, onJournalOpenC
   const unackedAlertCount = patient.alerts.filter(a => !a.acknowledged).length
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col md:h-full">
 
       {/* ── Patient header ───────────────────────────────────────────────── */}
-      <div className="px-6 pt-5 pb-0 border-b border-cream-100 bg-white">
+      <div className="px-4 md:px-6 pt-5 pb-0 border-b border-cream-100 bg-white">
 
         {/* Top row: name + badges */}
-        <div className="flex items-start justify-between gap-4 mb-3">
+        <div className="flex flex-wrap items-start justify-between gap-3 md:gap-4 mb-3">
           <div className="flex items-start gap-3">
             <div className="w-10 h-10 rounded-full bg-forest-900 flex items-center justify-center shrink-0">
               <span className="text-[11px] font-body font-semibold text-cream-25">{patient.initials}</span>
@@ -70,7 +70,7 @@ export default function ClinicalWorkspace({ patient, journalOpen, onJournalOpenC
             </div>
           </div>
 
-          <div className="flex items-center gap-2 flex-wrap justify-end shrink-0">
+          <div className="flex items-center gap-2 flex-wrap justify-end">
             <PhaseIndicator phase={patient.currentPhase as EMDRPhase} size="md" />
             {patient.dissociationRisk !== 'low' && (
               <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full border text-xs font-body font-medium capitalize ${RISK_STYLES[patient.dissociationRisk]}`}>
@@ -87,7 +87,7 @@ export default function ClinicalWorkspace({ patient, journalOpen, onJournalOpenC
         </div>
 
         {/* Meta row: session count, last session, modality */}
-        <div className="flex items-center gap-4 pb-3 text-[11px] font-body text-cream-400">
+        <div className="flex items-center flex-wrap gap-x-4 gap-y-0.5 pb-3 text-[11px] font-body text-cream-400">
           <span>Session {patient.sessionCount}</span>
           <span className="text-cream-200">·</span>
           <span>Last: {patient.lastSessionDate}</span>
@@ -103,7 +103,7 @@ export default function ClinicalWorkspace({ patient, journalOpen, onJournalOpenC
 
         {/* Tab bar */}
         <Tabs.Root value={activeTab} onValueChange={v => setActiveTab(v as TabValue)}>
-          <Tabs.List className="flex items-end gap-0 -mb-px">
+          <Tabs.List className="flex items-end gap-0 -mb-px overflow-x-auto scrollbar-none">
             {TAB_LIST.map(tab => (
               <Tabs.Trigger
                 key={tab.value}
@@ -131,7 +131,7 @@ export default function ClinicalWorkspace({ patient, journalOpen, onJournalOpenC
       </div>
 
       {/* ── Tab content (scrollable) ─────────────────────────────────────── */}
-      <div className="flex-1 overflow-y-auto bg-cream-25/50">
+      <div className="md:flex-1 overflow-y-auto bg-cream-25/50">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}

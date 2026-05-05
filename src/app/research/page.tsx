@@ -144,8 +144,8 @@ export default function ResearchPage() {
       <FadeUp>
         <div className="space-y-5">
           <SectionLabel className="mb-2">What the Data Contains</SectionLabel>
-          <div className="rounded-2xl border border-cream-200 overflow-hidden">
-            <table className="w-full">
+          <div className="rounded-2xl border border-cream-200 overflow-hidden overflow-x-auto">
+            <table className="w-full min-w-[480px]">
               <thead>
                 <tr className="bg-cream-25 border-b border-cream-200">
                   {['Data Type', 'Clinical Significance', 'Research Value'].map((h) => (

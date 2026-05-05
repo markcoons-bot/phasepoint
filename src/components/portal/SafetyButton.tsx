@@ -26,7 +26,7 @@ export default function SafetyButton({ patient }: Props) {
       {/* Floating button */}
       <button
         onClick={() => setOpen(true)}
-        className="safety-btn fixed bottom-6 right-5 z-40 flex items-center gap-2 px-4 py-2.5 rounded-full bg-forest-900 text-cream-25 font-body text-sm font-medium shadow-lg hover:bg-forest-800 transition-colors sm:right-5 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0"
+        className="safety-btn fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-5 z-40 flex items-center gap-2 px-4 py-2.5 rounded-full bg-forest-900 text-cream-25 font-body text-sm font-medium shadow-lg hover:bg-forest-800 transition-colors"
       >
         <span
           className="w-2 h-2 rounded-full shrink-0"
